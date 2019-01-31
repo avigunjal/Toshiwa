@@ -1,0 +1,273 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/form_bg"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/loading"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_below="@+id/common_toolbar"
+            android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <include layout="@layout/layout_responsible_person"/>
+
+            <LinearLayout
+                android:id="@+id/layout_edit_address_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <!--Amount count-->
+                <com.toshiwa.CustomView.TextView_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Amount Count"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:paddingBottom="4dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/l1_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edittext"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <com.toshiwa.CustomView.Edittext_Light
+                        android:id="@+id/et_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:enabled="true"
+                        android:hint="Amount Count"
+                        android:inputType="number"
+                        android:imeActionLabel="Next"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_gray"
+                        android:textCursorDrawable="@drawable/edittext_cursor"
+                        android:textSize="16dp">
+
+                    </com.toshiwa.CustomView.Edittext_Light>
+
+                </LinearLayout>
+
+                <!--PO count-->
+                <com.toshiwa.CustomView.TextView_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="P.O. Amount"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:paddingBottom="4dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/l1_po"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edittext"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <com.toshiwa.CustomView.Edittext_Light
+                        android:id="@+id/et_po"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:enabled="true"
+                        android:hint="P.O. Amount"
+                        android:imeActionLabel="Next"
+                        android:inputType="number"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_gray"
+                        android:textCursorDrawable="@drawable/edittext_cursor"
+                        android:textSize="16dp">
+
+                    </com.toshiwa.CustomView.Edittext_Light>
+
+                </LinearLayout>
+
+                <!--Advance received?-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Advance Received ? : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_advance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+                </LinearLayout>
+
+
+
+                <!--Remark if any-->
+                <com.toshiwa.CustomView.TextView_Regular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Remark ( If any )"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:paddingBottom="4dp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    />
+                <LinearLayout
+                    android:id="@+id/l1_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edittext"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <com.toshiwa.CustomView.Edittext_Light
+                        android:id="@+id/et_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:enabled="true"
+                        android:hint="Remark..."
+                        android:imeActionLabel="Next"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_gray"
+                        android:textCursorDrawable="@drawable/edittext_cursor"
+                        android:textSize="16dp">
+
+                    </com.toshiwa.CustomView.Edittext_Light>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:background="@drawable/add_button"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:id="@+id/text_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textSize="20dp"
+                        android:textColor="@drawable/add_text_color"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/cancel_btn"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:id="@+id/text_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:textSize="20dp"
+                        android:textColor="@drawable/cancel_text_color"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

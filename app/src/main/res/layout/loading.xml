@@ -1,0 +1,30 @@
+<LinearLayout
+    android:id="@+id/loading"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1"
+    android:visibility="gone"
+    android:layout_gravity="center"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateBehavior="repeat"
+        app:SpinKit_Style="Circle"
+        app:SpinKit_Color="@color/colorPrimary" />
+
+    <com.toshiwa.CustomView.TextView_Regular
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:textColor="@color/green"
+        android:padding="12dp"
+        android:text="Breath in.Breath out.."
+        />
+
+</LinearLayout>

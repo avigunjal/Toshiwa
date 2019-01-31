@@ -1,0 +1,68 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cool_white"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/loading"/>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scroll_view"
+             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_lead_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:padding="12dp"
+        android:layout_below="@+id/common_toolbar"
+        android:nestedScrollingEnabled="false"
+        />
+
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/pd"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
+        android:indeterminateBehavior="cycle"
+        android:indeterminateTint="@color/colorAccent"
+        />
+
+    <com.toshiwa.CustomView.TextView_Light
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="No Employee data available"
+        android:textSize="22sp"
+        android:textColor="@color/colorAccent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:id="@+id/no_lead"
+        />
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

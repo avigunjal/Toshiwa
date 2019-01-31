@@ -1,0 +1,190 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_green"
+    android:fitsSystemWindows="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:theme="@style/AppTheme"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        android:background="@null"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        >
+
+        <com.toshiwa.CustomView.TextView_Regular
+            android:id="@+id/tv_toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="start"
+            android:paddingLeft="4dp"
+            android:text=""
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <include layout="@layout/loading"/>
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_gravity="center"
+            android:layout_below="@+id/common_toolbar"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/emp_form"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/btn_view"
+                    android:text="View All"
+                    android:textSize="12sp"
+                    android:layout_gravity="end"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile"
+                    android:layout_gravity="center"
+                    android:background="@drawable/drawable_circle"
+                    />
+                <LinearLayout
+                    android:id="@+id/email_login_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/l1_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext_login"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Employee Name"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:imeActionLabel="Next"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/l1_mobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext_login"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_mobile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile No"
+                            android:inputType="phone"
+                            android:maxLines="1"
+                            android:maxLength="10"
+                            android:imeActionLabel="Next"
+                            android:background="@color/white"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:singleLine="true"
+                            android:textSize="16dp"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/l1_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext_login"
+                        android:orientation="vertical"
+                        android:layout_marginTop="10dp"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_password"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/prompt_password"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:textSize="16dp"/>
+
+
+                    </LinearLayout>
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                       android:id="@+id/error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-Please Enter Valid Details-"
+                        android:textSize="12sp"
+                        android:padding="8dp"
+                        android:textColor="@android:color/holo_orange_light"
+                       android:visibility="gone"
+                        />
+
+                    <Button
+                        android:id="@+id/btn_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Add Employee"
+                        android:background="@drawable/btn_emp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:imeOptions="actionDone"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,560 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:focusable="false"
+    android:background="@color/form_bg"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/loading"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_below="@+id/common_toolbar"
+            android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+
+           <include layout="@layout/layout_responsible_person"/>
+
+            <LinearLayout
+                android:id="@+id/layout_edit_address_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <!--Load Extention completed-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Load Extension Done : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_load_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+                </LinearLayout>
+
+                <!--Load Reflection bill-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Load Reflection On Bill : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_load_reflection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+                </LinearLayout>
+
+
+                <!--Quotation completed-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Quotation Paid : "
+                        android:layout_weight="1"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_quotation_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:layout_gravity="end"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+                </LinearLayout>
+
+                <!--Soalr online application completed-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Solar Online Application Done : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_solar_online_app_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+                <!--Soalr offline application completed-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Solar Offline Application Done : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_solar_offline_app_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+                <!--Soalr Sanction Received-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Solar Sanction Received : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_sanction_received"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+                <!--Meda application completed-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Meda Application Done : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_meda_app_done"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+                <!--Meda sanction received-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Meda Sanction Received : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_meda_sanction_received"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+                <!--Joint inspection completed-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Joint Inspection Done : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_joint_inspection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+                <!--PCR Entered-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="PCR Entered : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_pcr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+                <!--Funds released-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Funds Released : "
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <com.toshiwa.CustomView.Checkbox_Regular
+                        android:id="@+id/chk_fund_released"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textSize="14dp"
+                        android:singleLine="true"
+                        android:clickable="true"
+                        app:buttonTint="@color/colorPrimary"
+                        android:visibility="visible"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.toshiwa.CustomView.TextView_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Meter Installation : "
+                android:textColor="@color/black"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <com.toshiwa.CustomView.TextView_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Net Meter No."
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                />
+
+            <LinearLayout
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edittext"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <com.toshiwa.CustomView.Edittext_Light
+                        android:id="@+id/et_net_meter_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:enabled="true"
+                        android:hint="Net Meter No."
+                        android:imeActionLabel="Next"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_gray"
+                        android:textCursorDrawable="@drawable/edittext_cursor"
+                        android:textSize="16dp">
+
+                    </com.toshiwa.CustomView.Edittext_Light>
+
+                </LinearLayout>
+
+            <com.toshiwa.CustomView.TextView_Regular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Generation Meter No."
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:paddingBottom="4dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                />
+            <LinearLayout
+                    android:id="@+id/l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_edittext"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <com.toshiwa.CustomView.Edittext_Light
+                        android:id="@+id/et_generation_meter_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:enabled="true"
+                        android:hint="Generation Meter No."
+                        android:imeActionLabel="Next"
+                        android:inputType="textNoSuggestions"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/light_gray"
+                        android:textCursorDrawable="@drawable/edittext_cursor"
+                        android:textSize="16dp"/>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/ll_add"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:background="@drawable/add_button"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:id="@+id/text_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add"
+                        android:textSize="20dp"
+                        android:textColor="@drawable/add_text_color"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/cancel_btn"
+                    android:layout_marginBottom="20dp"
+                    >
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:id="@+id/text_cancel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cancel"
+                        android:textSize="20dp"
+                        android:textColor="@drawable/cancel_text_color"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            </LinearLayout>
+
+    </ScrollView>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

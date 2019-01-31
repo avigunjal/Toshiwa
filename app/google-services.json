@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "836542492050",
+    "firebase_url": "https://toshiwa-9cb52.firebaseio.com",
+    "project_id": "toshiwa-9cb52",
+    "storage_bucket": "toshiwa-9cb52.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836542492050:android:866446285f336aba",
+        "android_client_info": {
+          "package_name": "com.toshiwa.toshiwa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "836542492050-slng3a6r3tev4vsch3kg3u2udol594av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCAQGSTgLO6JRnGs4JTGSTcQioG3Mnrzs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

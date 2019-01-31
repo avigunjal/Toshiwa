@@ -1,0 +1,23 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.toshiwa.CustomView.TextView_Regular
+        android:id="@+id/tv_responsible_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Responsible Person: "
+        android:textColor="@color/light_gray"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <com.toshiwa.CustomView.TextView_Regular
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date: "
+        android:textColor="@color/gray"
+        android:textSize="12dp" />
+
+</LinearLayout>

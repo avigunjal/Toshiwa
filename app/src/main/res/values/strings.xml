@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">Toshiwa</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Toshiwa</string>
+    <string name="nav_header_subtitle">Toshiwa Solar Pvt. Ltd.</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="purchase">Purchase\nOrder</string>
+    <string name="approvals">Approvals\nDetails</string>
+    <string name="material">Material Details</string>
+    <string name="execution">Execution\nDetails</string>
+    <string name="completion">Completion \nDetails</string>
+    <string name="msedcl_bill">MSEDCL\nBill</string>
+    <string name="account">Account</string>
+    <string name="meter_reading">Meter\nReading</string>
+    <string name="service">Service</string>
+    <string name="login_title">Toshiwa</string>
+
+    <string name="password">admin1234toshiwa</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">User Id</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Log in</string>
+    <string name="error_invalid_email">This user id is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="network_error">Oops.. Something went wrong.</string>
+
+
+    <!--form fields-->
+
+    <string name="subsidy">Subsidy</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="single">Single</string>
+    <string name="three">Three</string>
+    <string name="grid">Grid</string>
+    <string name="ongrid">On Grid</string>
+    <string name="offgrid">Off Grid</string>
+    <string name="load">Load Extension</string>
+    <string name="phase">Phase</string>
+    <string name="area_type">Area Type</string>
+    <string name="residential">Residential</string>
+    <string name="commercial">Commercial </string>
+    <string name="trust">Trust</string>
+    <string name="project_cost">Project Cost</string>
+    <string name="fabrication">Fabrication</string>
+    <string name="inverter">Inverter</string>
+    <string name="panel">P.V.Panel</string>
+    <string name="add">Add</string>
+    <string name="cancel">cancel</string>
+    <string name="developer"><b></b>\nAvinash &amp; Laxmikant
+    </string>
+    <string name="completed">Mark as completed?</string>
+
+
+</resources>

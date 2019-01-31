@@ -1,0 +1,582 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:background="@color/form_bg"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/loading"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_below="@+id/common_toolbar"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_vertical_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <include layout="@layout/layout_responsible_person"/>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_purchase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                  <!--  <LinearLayout
+                        android:id="@+id/l1_order_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_order_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:hint="@string/order_no"
+                            android:imeActionLabel="Next"
+                            android:inputType="textNoSuggestions"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:textSize="16dp">
+
+                        </com.toshiwa.CustomView.Edittext_Light>
+
+                    </LinearLayout>
+-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+                        <com.toshiwa.CustomView.TextView_Regular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/subsidy"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            />
+                        <RadioGroup
+                            android:id="@+id/rg_subsidy"
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_subsidy_yes"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yes"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_subsidy_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                 app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+                        <com.toshiwa.CustomView.TextView_Regular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/grid"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            />
+                        <RadioGroup
+                            android:id="@+id/rg_grid"
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_ongrid"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/ongrid"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                 app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_offgrid"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/offgrid"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+                        <com.toshiwa.CustomView.TextView_Regular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/load"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            />
+                        <RadioGroup
+                            android:id="@+id/rg_load"
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_load_yes"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yes"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_load_no"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+                        <com.toshiwa.CustomView.TextView_Regular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/area_type"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            />
+                    <RadioGroup
+                           android:id="@+id/rg_type"
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_res"
+                                android:layout_width="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/residential"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_com"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/commercial"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_trust"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/trust"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        >
+
+                        <com.toshiwa.CustomView.TextView_Regular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:text="@string/phase"
+                            android:textColor="@color/black"
+                            android:textSize="16dp"
+                            android:textStyle="bold"
+                            />
+                        <RadioGroup
+                            android:id="@+id/rg_phase"
+                            xmlns:android="http://schemas.android.com/apk/res/android"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_two_phase"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:text="@string/single"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+                            <android.support.v7.widget.AppCompatRadioButton
+                                android:id="@+id/rb_three_phase"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/three"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:singleLine="true"
+                                android:clickable="true"
+                                app:buttonTint="@color/colorPrimary"
+                                android:visibility="visible"
+                                />
+
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Project Cost"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        />
+                    <LinearLayout
+                        android:id="@+id/l2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_project_cost"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:hint="@string/project_cost"
+                            android:imeActionLabel="Next"
+                            android:inputType="textNoSuggestions"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Fabrication"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        />
+                    <LinearLayout
+                        android:id="@+id/ll_fabrication"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_fabrication"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:hint="@string/fabrication"
+                            android:imeActionLabel="Next"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Inverter"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        />
+                    <LinearLayout
+                        android:id="@+id/ll_inverter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_inverter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:hint="@string/inverter"
+                            android:imeActionLabel="Next"
+                            android:inputType="textNoSuggestions"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                    <com.toshiwa.CustomView.TextView_Regular
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="P.V.Panel"
+                        android:textColor="@color/black"
+                        android:textSize="16dp"
+                        android:paddingBottom="4dp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        />
+
+                    <LinearLayout
+                        android:id="@+id/ll_panel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_edittext"
+                        android:orientation="vertical"
+                        android:padding="12dp">
+
+                        <com.toshiwa.CustomView.Edittext_Light
+                            android:id="@+id/et_pv_panel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:enabled="true"
+                            android:hint="@string/panel"
+                            android:imeActionLabel="Next"
+                            android:inputType="textNoSuggestions"
+                            android:maxLines="1"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/light_gray"
+                            android:textCursorDrawable="@drawable/edittext_cursor"
+                            android:textSize="16dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/ll_add"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:background="@drawable/add_button"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <com.toshiwa.CustomView.TextView_Regular
+                            android:id="@+id/text_add"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/add"
+                            android:textSize="20dp"
+                            android:textColor="@drawable/add_text_color"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:padding="12dp"
+                        android:layout_marginLeft="6dp"
+                        android:background="@drawable/cancel_btn"
+                        android:layout_marginBottom="20dp"
+                        >
+
+                        <com.toshiwa.CustomView.TextView_Regular
+                            android:id="@+id/text_cancel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cancel"
+                            android:textSize="20sp"
+                            android:textColor="@drawable/cancel_text_color"
+                            android:gravity="center"
+                            android:textAllCaps="true"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.v4.widget.NestedScrollView>
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>
